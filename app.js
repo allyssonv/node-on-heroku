@@ -6,6 +6,6 @@ app.get('/', (req, res) => {
     res.send(cool())
 })
 
-app.listen(5000, () => {
+app.listen(process.env.port || 5000, () => {
     console.log('Server listen at: 5000')
 })
