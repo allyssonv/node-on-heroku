@@ -10,7 +10,7 @@ const IP = process.env.OPENSHIFT_NODEJS_IP || process.env.OPENSHIFT_INTERNAL_IP 
 
 app.get('/', (req, res) => {
 
-    fs.readFile('/tmp/file.txt', (err, data) => {
+    fs.readFile('/data/file.txt', (err, data) => {
         if (err) throw err
         res.send(data.toString())
     })
